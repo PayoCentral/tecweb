@@ -4,7 +4,7 @@
 
 <head>
 
-<title>XHTML 1.1 Template</title>
+<title>XHTML 1.1</title>
 
 </head>
 
@@ -186,9 +186,16 @@
     echo "Valor booleano de \$e: " . boolToString($e)  ;
     echo "<br>";
     echo "<br>";
-
-
     
+    //Ejercicio 7
+    echo "Ejercicio 7";
+    echo "<br>";
+    //**************************************************************** */
+    
+    echo $_SERVER['SERVER_SOFTWARE'] ;
+    echo "<br>";
+    echo $_SERVER['HTTP_ACCEPT_LANGUAGE'] ;
+    echo "<br>";
     ?>
     
     
