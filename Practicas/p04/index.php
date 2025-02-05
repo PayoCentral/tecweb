@@ -37,9 +37,37 @@
     echo "<br>";
     echo isset($house) ? '$house*5 Está definida y no es nula' : '$house*5 no está definida o es nula';
     echo "<br>";
+    echo "<br>";
 
     //Ejercicio 2
-
+    echo "Ejercicio 2";
+    echo "<br>";
+    //**************************************************************** */
+    $a = "ManejadorSQL";
+    $b = "MySQL";
+    $c = &$a;
+    
+    $a = "ManejadorSQL";
+    $b = 'MySQL';
+    $c = &$a;
+    
+    echo "Contenido de \$a: $a"; 
+    echo "<br>";
+    echo "Contenido de \$b: $b"; 
+    echo "<br>";
+    echo "Contenido de \$c: $c"; 
+    echo "<br>";
+    echo "<p>Asignamos a \$a el texto 'ManejadorSQL', a \$b el texto o cadena 'MySQL' y a \$c la referencia de \$a. <br> Por lo tanto, si cambiamos el valor de \$a, \$c también cambiará. <br> Si cambiamos el valor de \$b, \$c no cambiará. </p>";
+    echo "<br>";
+    echo "Parte 2";
+    echo "<br>";
+    $a = "PHP server";
+    $b = &$a;
+    echo "Contenido de \$a: $a";
+    echo "<br>";
+    echo "Contenido de \$b: $b";
+    echo "<br>";
+    echo "Lo mismo, estamos pasando la referencia de \$a a \$b, como un apuntador.";
     ?>
 </body>
 
