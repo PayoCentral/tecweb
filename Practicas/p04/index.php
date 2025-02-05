@@ -68,7 +68,37 @@
     echo "Contenido de \$b: $b";
     echo "<br>";
     echo "Lo mismo, estamos pasando la referencia de \$a a \$b, como un apuntador.";
+    echo "<br>";
+    echo "<br>";
+    
+    //Ejercicio 3
+    echo "Ejercicio 3";
+    echo "<br>";
+    //**************************************************************** */
+    $a = "PHP5";
+    echo "Valor de \$a: $a"; 
+    echo "<br>";
+    $z[] = &$a;
+    echo "Valor de \$z[0]: $z[0]"; 
+    echo "<br>";
+    $b = "5a version de PHP";
+    echo "Valor de \$b: $b"; 
+    echo "<br>";
+    @$c = $b * 10;
+    echo "Valor de \$c: $c"; 
+    echo "<br>";
+    $a .= $b;
+    echo "Nuevo valor de \$a: $a"; 
+    echo "<br>";
+    @$b *= $c;
+    echo "Nuevo valor de \$b: $b"; 
+    echo "<br>";
+    $z[0] = "MySQL";
+    echo "Nuevo valor de \$z[0]: $z[0]"; 
+    echo "<br>";
+    print_r($z); // Imprime contenido del arreglo $z
     ?>
+
 </body>
 
 </html>
