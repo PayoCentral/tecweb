@@ -97,7 +97,42 @@
     echo "Nuevo valor de \$z[0]: $z[0]"; 
     echo "<br>";
     print_r($z); // Imprime contenido del arreglo $z
+    echo "<br>";
+    echo "<br>";
+    
+    //Ejercicio 4
+    echo "Ejercicio 4";
+    echo "<br>";
+    //**************************************************************** */
+    
+    $a = "PHP5";
+    echo "Valor de \$a: " . $GLOBALS['a']  ; 
+
+    $z[] = &$a;
+    echo "Valor de \$z[0]: " . $GLOBALS['z'][0]  ; 
+    echo "<br>";
+    $b = "5a version de PHP";
+    echo "Valor de \$b: " . $GLOBALS['b'] ; 
+    echo "<br>";
+    @$c = $b * 10;
+    echo "Valor de \$c: " . $GLOBALS['c'] ; 
+    echo "<br>";
+    $a .= $b;
+    echo "Nuevo valor de \$a: " . $GLOBALS['a'] ; 
+    echo "<br>";
+    @$b *= $c;
+    echo "Nuevo valor de \$b: " . $GLOBALS['b'] ; 
+    echo "<br>";
+    $z[0] = "MySQL";
+    echo "Nuevo valor de \$z[0]: " . $GLOBALS['z'][0] ;
+    echo "<br>";    
+    print_r($GLOBALS['z']); 
+    echo "<br>";
+
     ?>
+    
+    
+    
 
 </body>
 
