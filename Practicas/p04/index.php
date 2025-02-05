@@ -150,6 +150,42 @@
     echo "<br>";
     echo "<br>";
     
+    //Ejercicio 6
+    echo "Ejercicio 6";
+    echo "<br>";
+    //**************************************************************** */
+    $a = "0";
+    $b = "TRUE";
+    $c = FALSE;
+    $d = ($a OR $b);
+    $e = ($a AND $c);
+    $f = ($a XOR $b);
+
+    
+    var_dump((bool)$a);
+    echo "<br>";
+    var_dump((bool)$b); 
+    echo "<br>";
+    var_dump($c);
+    echo "<br>";      
+    var_dump($d);
+    echo "<br>";      
+    var_dump($e);
+    echo "<br>";       
+    var_dump($f);
+    echo "<br>";    
+    
+    //Funcion para convertir valores booleanos a string y ya usar echo
+    echo "Funcion para convertir valores booleanos a string y ya usar echo";
+    echo "<br>";
+    function boolToString($bool) {
+        return $bool ? 'true' : 'false';
+    }
+    echo "Valor booleano de \$c: " . boolToString($c)  ; 
+    echo "<br>"; 
+    echo "Valor booleano de \$e: " . boolToString($e)  ;
+    echo "<br>";
+    echo "<br>";
 
 
     
