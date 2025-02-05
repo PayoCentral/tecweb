@@ -128,7 +128,31 @@
     echo "<br>";    
     print_r($GLOBALS['z']); 
     echo "<br>";
+    echo "<br>";
+    
+    //Ejercicio 5
+    echo "Ejercicio 5";
+    echo "<br>";
+    //**************************************************************** */
+    
+    $a = "7 personas";
+    $b = (integer) $a;
+    echo "Valor de \$a: $a";
+    echo "<br>";
+    echo "Valor de \$b: $b"; 
+    echo "<br>";
 
+    $a = "9E3";
+    $c = (double) $a;
+    echo "Nuevo valor de \$a: $a"; 
+    echo "<br>";
+    echo "Valor de \$c: $c";
+    echo "<br>";
+    echo "<br>";
+    
+
+
+    
     ?>
     
     
