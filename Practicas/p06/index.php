@@ -83,20 +83,40 @@ require_once 'src/funciones.php';
         <input type="submit">
     </form>
 
-    <h2>Ejemplo de POST</h2>
-    <form action="http://localhost/tecweb/practicas/p04/index.php" method="post">
-        Name: <input type="text" name="name"><br>
-        E-mail: <input type="text" name="email"><br>
-        <input type="submit">
+    <h2>Ejercio 6</h2>
+    <p>Crea en código duro un arreglo asociativo que sirva para registrar el parque vehicular de 
+    una ciudad.</p>
+    <h2>Consultar Parque Vehicular</h2>
+    <form action="index.php" method="POST">
+        <label for="placa">Placa del auto:</label>
+        <input type="text" id="placa" name="placa"><br><br>
+        <input type="submit" name="buscar" value="Buscar">
+        <input type="submit" name="mostrar_todos" value="Mostrar Todos">
     </form>
-    <br>
+
     <?php
-        if(isset($_POST["name"]) && isset($_POST["email"]))
-        {
-            echo $_POST["name"];
-            echo '<br>';
-            echo $_POST["email"];
+    require_once 'src/funciones.php';
+    $autos = obtenerAutos();
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_POST['buscar'])) {
+            $placa = $_POST['placa'];
+            $auto = buscarPlaca($autos, $placa);
+            if ($auto) {
+                echo "<h3>Resultados de búsqueda:</h3>";
+                echo "<pre>";
+                print_r($auto);
+                echo "</pre>";
+            } else {
+                echo "<h3>No se encontró el auto con placa $placa.</h3>";
+            }
+        } elseif (isset($_POST['mostrar_todos'])) {
+            echo "<h3>Todos los autos registrados:</h3>";
+            echo "<pre>";
+            print_r($autos);
+            echo "</pre>";
         }
+    }
     ?>
 </body>
 </html>

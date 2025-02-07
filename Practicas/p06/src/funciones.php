@@ -81,6 +81,207 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
+<?php
+function obtenerAutos() {
+    return array(
+        //Ejemplos generados por GITHUB Copilot
+        "ABC1234" => array(
+            "Auto" => array(
+                "marca" => "HONDA",
+                "modelo" => 2020,
+                "tipo" => "camioneta"
+            ),
+            "Propietario" => array(
+                "nombre" => "Alfonso Esparza",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "C.U., Jardines de San Manuel"
+            )
+        ),
+        "DEF5678" => array(
+            "Auto" => array(
+                "marca" => "MAZDA",
+                "modelo" => 2019,
+                "tipo" => "sedan"
+            ),
+            "Propietario" => array(
+                "nombre" => "Ma. del Consuelo Molina",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "97 oriente"
+            )
+        ),
+        
+        "GHI9101" => array(
+            "Auto" => array(
+                "marca" => "TOYOTA",
+                "modelo" => 2018,
+                "tipo" => "sedan"
+            ),
+            "Propietario" => array(
+                "nombre" => "Juan Pérez",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. Juárez"
+            )
+        ),
+        
+        "JKL1121" => array(
+            "Auto" => array(
+                "marca" => "NISSAN",
+                "modelo" => 2017,
+                "tipo" => "camioneta"
+            ),
+            "Propietario" => array(
+                "nombre" => "María García",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. Reforma"
+            )
+        ),
+        
+        "MNO3141" => array(
+            "Auto" => array(
+                "marca" => "FORD",
+                "modelo" => 2016,
+                "tipo" => "sedan"
+            ),
+            "Propietario" => array(
+                "nombre" => "José Hernández",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. 14 sur"
+            )
+        ),
+        
+        "PQR5161" => array(
+            "Auto" => array(
+                "marca" => "CHEVROLET",
+                "modelo" => 2015,
+                "tipo" => "camioneta"
+            ),
+            "Propietario" => array(
+                "nombre" => "Luisa Martínez",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. 11 norte"
+            )
+        ),
+        
+        "STU7181" => array(
+            "Auto" => array(
+                "marca" => "VOLKSWAGEN",
+                "modelo" => 2014,
+                "tipo" => "sedan"
+            ),
+            "Propietario" => array(
+                "nombre" => "Ricardo López",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. 25 poniente"
+            )
+        ),
+        
+        "VWX9191" => array(
+            "Auto" => array(
+                "marca" => "HONDA",
+                "modelo" => 2013,
+                "tipo" => "camioneta"
+            ),
+            "Propietario" => array(
+                "nombre" => "María Rodríguez",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. 31 poniente"
+            )
+        ),
+        
+        "YZA1212" => array(
+            "Auto" => array(
+                "marca" => "MAZDA",
+                "modelo" => 2012,
+                "tipo" => "sedan"
+            ),
+            "Propietario" => array(
+                "nombre" => "Juan Pérez",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. Juárez"
+            )
+        ),
+        
+        "BCD3232" => array(
+            "Auto" => array(
+                "marca" => "TOYOTA",
+                "modelo" => 2011,
+                "tipo" => "camioneta"
+            ),
+            "Propietario" => array(
+                "nombre" => "María García",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. Reforma"
+            )
+        ),
+        
+        "CDE5252" => array(
+            "Auto" => array(
+                "marca" => "FORD",
+                "modelo" => 2010,
+                "tipo" => "sedan"
+            ),
+            "Propietario" => array(
+                "nombre" => "José Hernández",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. 14 sur"
+            )
+        ),
+        
+        "EFG7272" => array(
+            "Auto" => array(
+                "marca" => "CHEVROLET",
+                "modelo" => 2009,
+                "tipo" => "camioneta"
+            ),
+            "Propietario" => array(
+                "nombre" => "Luisa Martínez",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. 11 norte"
+            )
+        ),
+        
+        "GHI9292" => array(
+            "Auto" => array(
+                "marca" => "VOLKSWAGEN",
+                "modelo" => 2008,
+                "tipo" => "sedan"
+            ),
+            "Propietario" => array(
+                "nombre" => "Ricardo López",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. 25 poniente"
+            )
+        ),
+        
+        "JKL1313" => array(
+            "Auto" => array(
+                "marca" => "HONDA",
+                "modelo" => 2007,
+                "tipo" => "camioneta"
+            ),
+            "Propietario" => array(
+                "nombre" => "María Rodríguez",
+                "ciudad" => "Puebla, Pue.",
+                "direccion" => "Av. 31 poniente"
+            )
+        ),
+    
+    );
+}
+
+function buscarPlaca($autos, $placa) {
+    if (isset($autos[$placa])) {
+        return $autos[$placa];
+    } else {
+        return null;
+    }
+}
+
+function obtenerTodos($autos) {
+    return $autos;
+}
+?>
+
 
 
 
