@@ -24,7 +24,49 @@ secuencia compuesta por:  impar, par,impar </p>
         echo '<br>';
         ?>
     <h2>Ejercicio 3</h2>
+    <p>Utiliza un ciclo while para encontrar el primer número entero obtenido aleatoriamente, 
+    pero que además sea múltiplo de un número dado.  </p>
+    <?php
+require_once 'src/funciones.php';
 
+    if (isset($_GET['numero'])) {
+        $numero = $_GET['numero'];
+
+        // Verificar que el número es válido
+        if (!is_numeric($numero) || $numero <= 0) {
+            die("Introduce un número válido.");
+        }
+
+        echo "<h3>Resultados while:</h3>";
+        echo "<p>" . encontrarMultiploW($numero) . "</p>";
+
+        echo "<h3>Resultados dowhile:</h3>";
+        echo "<p>" . encontrarMultiploDoW($numero) . "</p>";
+    } else {
+        echo "Proporciona un número así: ?numero=7";}
+    ?>
+    
+    <h2>Ejercicio 4</h2>
+    <p>Crear un arreglo cuyos índices van de 97 a 122 y cuyos valores son las letras de la 'a'
+    a la 'z'. Usa la función chr(n) que devuelve el caracter cuyo código ASCII es n para poner 
+    el valor en cada índice</p>
+    <?php  
+    require_once 'src/funciones.php';
+    $arreglo = Ascii();
+    ?>
+    <h3>Tabla de caracteres ASCII:</h3>
+    <table border="1">
+        <tr>
+            <th>Ascii</th>
+            <th>Letra</th>
+        </tr>
+        <?php foreach ($arreglo as $key => $value): ?>
+            <tr>
+                <td><?php echo $key; ?></td>
+                <td><?php echo $value; ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
 
     <h2>Ejemplo de POST</h2>
     <form action="http://localhost/tecweb/practicas/p04/index.php" method="post">

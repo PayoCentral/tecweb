@@ -28,7 +28,46 @@ function _3numeros(){
     $numerosencontrados = $contador*3;
     echo 'Hubo '. $numerosencontrados. ' numeros '.' en ' .$contador .' iteraciones';
 }
+
+function encontrarMultiploW($numero) {
+    $encontrado = false;
+    $contador = 0;
+
+    while (!$encontrado) {
+        $aleatorio = rand(1, 100); // Genera un número aleatorio entre 1 y 100
+        $contador++;
+        if ($aleatorio % $numero === 0) {
+            $encontrado = true;
+            return "Número encontrado $aleatorio después de $contador iteraciones.\n";
+        }
+    }
+}
+
+function encontrarMultiploDoW($numero) {
+    $encontrado = false;
+    $contador = 0;
+
+    do {
+        $aleatorio = rand(1, 100); // Genera un número aleatorio entre 1 y 100
+        $contador++;
+        if ($aleatorio % $numero === 0) {
+            $encontrado = true;
+            return "Número encontrado $aleatorio después de $contador iteraciones.\n";
+        }
+    } while (!$encontrado);
+}
+
+function Ascii() {
+    $arreglo = array();
+    for ($i = 97; $i <= 122; $i++) {
+        $arreglo[$i] = chr($i);
+    }
+    return $arreglo;
+}
+
 ?>
+
+
 
 
 
