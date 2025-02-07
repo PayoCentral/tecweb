@@ -21,7 +21,10 @@ secuencia compuesta por:  impar, par,impar </p>
         <?php
         require_once __DIR__.'/src/funciones.php';
         _3numeros();
+        echo '<br>';
         ?>
+    <h2>Ejercicio 3</h2>
+
 
     <h2>Ejemplo de POST</h2>
     <form action="http://localhost/tecweb/practicas/p04/index.php" method="post">

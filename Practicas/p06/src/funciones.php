@@ -16,13 +16,19 @@ function _3numeros(){
     $num1 = rand(pow(10, $digits-1), pow(10, $digits)-1);
     $num2 = rand(pow(10, $digits-1), pow(10, $digits)-1);
     $num3 = rand(pow(10, $digits-1), pow(10, $digits)-1);
+    $contador = 0;
     while($num1%2==0 || $num2%2!=0 || $num3%2==0)
     {
         $num1 = rand(pow(10, $digits-1), pow(10, $digits)-1);
         $num2 = rand(pow(10, $digits-1), pow(10, $digits)-1);
         $num3 = rand(pow(10, $digits-1), pow(10, $digits)-1);
         echo '<h3>'.$num1.', '.$num2.', '.$num3.'</h3>';
+        $contador++;
     }
-    //echo '<h3>Los números son: '.$num1.', '.$num2.', '.$num3.'</h3>';
+    $numerosencontrados = $contador*3;
+    echo 'Hubo '. $numerosencontrados. ' numeros '.' en ' .$contador .' iteraciones';
 }
 ?>
+
+
+
