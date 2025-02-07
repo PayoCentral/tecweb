@@ -67,6 +67,21 @@ require_once 'src/funciones.php';
             </tr>
         <?php endforeach; ?>
     </table>
+    
+    <h2>Ejercicio 5</h2>
+    <p>Usar las variables $edad y $sexo en una instrucción if para identificar una persona de 
+    sexo “femenino”, cuya edad oscile entre los 18 y 35 años y mostrar un mensaje de 
+    bienvenida apropiado.</p>
+    <h2>Formulario de Bienvenida</h2>
+    <form action="http://localhost/tecweb/Practicas/p06/src/funciones.php" method="post">
+        Edad: <input type="number" name="edad" required><br>
+        Sexo: 
+        <select name="sexo" required>
+            <option value="femenino">Femenino</option>
+            <option value="masculino">Masculino</option>
+        </select><br>
+        <input type="submit">
+    </form>
 
     <h2>Ejemplo de POST</h2>
     <form action="http://localhost/tecweb/practicas/p04/index.php" method="post">

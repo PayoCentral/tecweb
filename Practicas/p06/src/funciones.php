@@ -65,6 +65,20 @@ function Ascii() {
     return $arreglo;
 }
 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $edad = $_POST['edad'];
+    $sexo = $_POST['sexo'];
+
+    if ($sexo == "femenino" && $edad >= 18 && $edad <= 35) {
+        echo "<h2>Bienvenida, usted está en el rango de edad permitido.</h2>";
+    } else {
+        echo "<h2>Error: No cumple con los requisitos de sexo y edad.</h2>";
+    }
+} else {
+    echo "<h2>Error, complete el formulario correctamente.</h2>";
+}
+
 ?>
 
 
