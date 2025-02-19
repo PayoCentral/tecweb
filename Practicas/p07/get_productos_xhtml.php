@@ -5,6 +5,12 @@
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
     <title>Productos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <style>
+        img {
+            width: auto;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
     <h3>PRODUCTOS</h3>
