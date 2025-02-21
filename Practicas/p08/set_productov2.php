@@ -27,8 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         echo "<p>Error: El producto ya existe en la base de datos.</p>";
     } else {
-        $sql = "INSERT INTO productos VALUES (null, '{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}', 0)";
-        
+        //$sql = "INSERT INTO productos VALUES (null, '{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}', 0)";
+        $sql = "INSERT INTO productos (nombre, marca, modelo, precio, descripcion, unidades) VALUES ('$name', '$brand', '$model', '$price', '$desc', '$unit')";
         if ($link->query($sql) === TRUE) {
             echo 'Producto insertado con ID: '.$link->insert_id;
             echo "<ul>
