@@ -378,33 +378,41 @@ $(document).ready(function(){
     }
     
     
+    //Corrreciones gracias a ChatGPT
     $('#name').on('input', function () {
         let nombre = $(this).val().trim();
+    
+        // Si el campo de nombre está vacío, no hacemos nada
         if (nombre.length === 0) {
-            Barra('⚠ Introduce un nombre.');
+            actualizarBarraEstado('⚠ Introduce un nombre.');
+            $('#errorNombre').text('');
             return;
         }
+    
     
         $.ajax({
             url: './backend/product-search.php',
             type: 'GET',
-            data: { search: nombre },
+            data: { search: nombre },  
             success: function (response) {
-                let productos = JSON.parse(response);
+                let productos = [];
+    
+                try {
+                    productos = JSON.parse(response); 
+                } catch (e) {
+                    console.error("Error al analizar la respuesta JSON:", e);
+                    actualizarBarraEstado('⚠ Error al procesar la respuesta del servidor.');
+                    return;
+                }
+    
                 if (productos.length > 0) {
-                    actualizarBarraEstado('❌ El nombre ya existe en la base de datos.');
                     $('#errorNombre').text('El nombre ya está registrado.');
                 } else {
-                    actualizarBarraEstado('✅ El nombre está disponible.');
-                    $('#errorNombre').text('');
+                    $('#errorNombre').text('El nombre no está registrado.');
                 }
             },
-            error: function () {
-                actualizarBarraEstado('⚠ Error al verificar el nombre.');
-            }
         });
     });
-    
     
     // Función para mostrar el mensaje en un contenedor separado
     function mostrarMensajeValidacion(mensaje) {
@@ -412,5 +420,10 @@ $(document).ready(function(){
     }
     
     
+    // Función para mostrar el mensaje en un contenedor separado
+    function mostrarMensajeValidacion(mensaje) {
+        $('#validacion-mensaje').text(mensaje).show();
+    }
+
       
 });
