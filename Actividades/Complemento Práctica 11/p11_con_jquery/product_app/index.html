@@ -32,21 +32,22 @@
               <!-- FORMULARIO PARA AGREGAR PRODUCTO -->
               <form id="product-form">
                 <ul>
-                    <li><label for="name">Nombre:</label> <input type="text" id="name"></li>
-                    <li><label for="marca">Marca:</label> <input type="text" id="marca"></li>
-                    <li><label for="modelo">Modelo:</label> <input type="text" id="modelo"></li>
-                    <li><label for="precio">Precio:</label> <input type="number" id="precio"></li>
-                    <li><label for="unidades">Unidades:</label> <input type="number" id="unidades"></li>
+                    <li><label for="name">Nombre:</label> <input type="text" id="name"><span class="error" id="errorNombre"></span></li>
+                    <li><label for="marca">Marca:</label><input type="text" id="marca"><span class="error" id="errorMarca"></span></li>
+                    <li><label for="modelo">Modelo:</label> <input type="text" id="modelo"><span class="error" id="errorModelo"></span></li>
+                    <li><label for="precio">Precio:</label> <input type="number" id="precio"><span class="error" id="errorPrecio"></span></li>
+                    <li><label for="unidades">Unidades:</label> <input type="number" id="unidades"><span class="error" id="errorUnidades"></span></li>
                     <li><label for="detalles">Detalles:</label><br>
                         <textarea id="detalles" rows="4" cols="40"></textarea>
+                        <span class="error" id="errorDetalles"></span>
                     </li>
-                    <li><label for="imagen">URL de la imagen:</label> <input type="text" id="imagen"></li>
+                    <li><label for="imagen">URL de la imagen:</label> <input type="text" id="imagen"><span class="error" id="errorImagen"></span></li>
                 </ul>
                 <input type="hidden" id="productId">
                 <button class="btn btn-primary btn-block text-center" type="submit">
                     Agregar Producto
                 </button>
-            </form>            
+            </form>               
             </div>
           </div>
         </div>
