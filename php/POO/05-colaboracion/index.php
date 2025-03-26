@@ -11,7 +11,7 @@
         
         $pag1 = new Pagina('El rincon del programador','El sótano del programador');
         
-        for($i=0;$i<15;i++){
+        for($i=0;$i<15;$i++){
             $pag1->insertar_cuerpo('Este es el parrafo número ' . ($i+1). 'que debe aparecer en la página');
         }
         
