@@ -1,7 +1,6 @@
 <?php
+/*
     include_once __DIR__.'/database.php';
-
-    // SE OBTIENE LA INFORMACIÓN DEL PRODUCTO ENVIADA POR EL CLIENTE
     $data = array(
         'status'  => 'error',
         'message' => 'Ya existe un producto con ese nombre'
@@ -31,4 +30,10 @@
 
     // SE HACE LA CONVERSIÓN DE ARRAY A JSON
     echo json_encode($data, JSON_PRETTY_PRINT);
+    */
+    require_once __DIR__.'/myapi/Products.php';
+
+    $products = new Products();
+    $products->add($_POST);
+    echo $products->getData();
 ?>

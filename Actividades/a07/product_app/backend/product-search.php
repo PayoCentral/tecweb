@@ -1,4 +1,5 @@
 <?php
+/*
     include_once __DIR__.'/database.php';
 
     header('Content-Type: application/json');
@@ -38,4 +39,9 @@
 
     // Aseguramos que la respuesta sea JSON válida
     echo json_encode($data, JSON_PRETTY_PRINT);
+    */
+    require_once __DIR__.'/myapi/Products.php';
+    $products = new Products();
+    $products->search($_GET['search']);
+    echo $products->getData();
 ?>
