@@ -1,0 +1,15 @@
+{
+    "name": "tavo3/product_app",
+    "autoload": {
+        "psr-4": {
+            "Tavo3\\ProductApp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "PayoCentral",
+            "email": "ph836854@gmail.com"
+        }
+    ],
+    "require": {}
+}
