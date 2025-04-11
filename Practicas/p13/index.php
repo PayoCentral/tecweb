@@ -17,5 +17,23 @@
         $response->getBody()->write("Hola, " . $args["nombre"]);
         return $response;
     });
+    
+    $app->post("/pruebapost", function ( $request,  $response, array $args) {
+        $reqPost = $request->getParsedBody();
+        $val1 = $reqPost["val1"];
+        $val2 = $reqPost["val2"];
+        
+        $response->getBody()->write("Valores: " . $val1 . " " . $val2);
+        return $response; 
+    });
+    
+    $app->get("/testjson", function($request, $response, $args) {
+        $data[0]["nombre"]="Patricio";
+        $data[0]["apellidos"]="Hernandez Jimenez";
+        $data[1]["nombre"]="Santiago";
+        $data[1]["apellidos"]="Hernandez Jimenez";
+        $response->getBody()->write(json_encode($data, JSON_PRETTY_PRINT));
+        return $response;
+    });
     $app->run();
 ?>
