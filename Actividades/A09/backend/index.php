@@ -11,7 +11,7 @@ require __DIR__ . '/Delete/Delete.php';
 
 // Inicializar Slim
 $app = AppFactory::create();
-$app->setBasePath('/tecweb/Practicas/p12s/backend');  // ¡Añade esta línea después de crear $app!
+$app->setBasePath('/tecweb/Actividades/A09/backend');  // ¡Añade esta línea después de crear $app!
 $app->addBodyParsingMiddleware(); // Para leer JSON en las requests
 
 // --- ENDPOINTS --- //

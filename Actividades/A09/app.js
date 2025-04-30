@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     function listarProductos() {
         $.ajax({
-            url: '/tecweb/Practicas/p12s/backend/products',  // Cambiado de product-list.php a products (GET)
+            url: '/tecweb/Actividades/A09/backend/products',  // Cambiado de product-list.php a products (GET)
             type: 'GET',
             success: function(response) {
                 // La API REST ya devuelve JSON directamente, no necesitamos parsear
